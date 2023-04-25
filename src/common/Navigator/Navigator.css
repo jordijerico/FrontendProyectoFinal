@@ -1,0 +1,30 @@
+.navigatorDesign {
+    height: 2em;
+    width: 4.5em;
+    background-color: transparent;
+    border-radius: 0.3em;
+    color: rgb(60, 148, 182);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.3em;
+    transition: 0.3s;
+    
+}
+
+.navigatorDesign:hover {
+    background-color: rgb(187, 211, 230);
+
+    transition: 0.3s;
+}
+
+@media (min-width:900px) {
+    .navigatorDesign {
+        height: 4em;
+        width: 8em;
+        font-weight: 700;
+        font-size: larger;
+    }
+}

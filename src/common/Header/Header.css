@@ -1,0 +1,56 @@
+.headerDesign {
+    height: 10vh;
+    background-color: white;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.linksNav {
+    display: flex;
+}
+
+.logoutDesign, .profileButton{
+    height: 2em;
+    width: 4.5em;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.3em;
+    transition: 0.3s;
+    color: rgb(60, 148, 182);
+    font-weight: 500;
+
+}
+.logoutDesign:hover{
+    background-color: rgb(187, 211, 230);
+
+    transition: 0.3s;
+}
+.logoDesign{
+    width: 9em;
+    height: 2.5em;
+
+    cursor: pointer;
+}
+
+@media (min-width:900px) {
+
+
+    .logoDesign{
+        width: 15em;
+        height: 5em;
+
+        cursor: pointer;
+    }
+    .logoutDesign{
+        height: 4em;
+        width: 10em;
+        font-weight: 700;
+        font-size: larger;
+    }
+}
