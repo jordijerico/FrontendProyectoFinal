@@ -21,14 +21,35 @@ export const Header = () => {
     return (
         <div className="headerDesign">
 
+            {datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 1 ? (
+                <>
+                    <div className='logoDesign' onClick={() => { navigate("/") }}></div>
+                    <div className='linksNav'>
+                        <Navigator ruta={datosCredencialesRedux?.credentials?.usuario?.name} destino={"/profile"} />
+                        <Navigator ruta={"Admin"} destino={"/admin"} />
+                        <div className='logoutDesign' onClick={() => logoutFunction()}>Logout</div>
+                    </div>
+                </>
+            ) : (datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 2 ? (
+                <>
+                    <div className='logoDesign' onClick={() => { navigate("/") }}></div>
+                    <div className='linksNav'>
+                        <Navigator ruta={datosCredencialesRedux?.credentials?.usuario?.name} destino={"/profile"} />
+                        <div className='logoutDesign' onClick={() => logoutFunction()}>Logout</div>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <div className='logoDesign' onClick={() => { navigate("/") }}></div>
+                    <div className='linksNav'>
+                        <Navigator ruta={"Login"} destino={"/login"} />
+                        <Navigator ruta={"Register"} destino={"/register"} />
+                    </div>
+                </>
+            )
 
-            <>
-                <div className='logoDesign' onClick={() => { navigate("/") }}></div>
-                <div className='linksNav'>
-                    <Navigator ruta={"Login"} destino={"/login"} />
-                    <Navigator ruta={"Register"} destino={"/register"} />
-                </div>
-            </>
+            )
+            }
 
         </div>
     )

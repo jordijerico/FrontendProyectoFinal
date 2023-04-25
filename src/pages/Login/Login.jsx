@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { InputText } from '../../common/InputText/InputText'
-// import { loginMe } from '../../services/apiCalls';
+import { loginMe } from '../../services/apiCalls';
 import './Login.css'
 import { useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
 import { login } from "../userSlice"
 import { decodeToken } from 'react-jwt';
-// import { validate } from '../../helpers/useful';
+import { validate } from '../../helpers/useful';
 export const Login = () => {
 
     const dispatch = useDispatch();
@@ -122,7 +122,7 @@ export const Login = () => {
                 name="password"
                 placeholder="escribe un password"
                 changeFunction={(e) => inputHandler(e)}
-            // validateFunction={(e) => inputValidate(e)}
+            validateFunction={(e) => inputValidate(e)}
             />
             <div>{credencialesError.passwordError}</div>
 
