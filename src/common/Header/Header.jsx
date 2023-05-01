@@ -21,6 +21,7 @@ export const Header = () => {
     return (
         <div className="headerDesign">
 
+            <div className='divLogo'></div>
             {datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 1 ? (
                 <>
                     <div className='logoDesign' onClick={() => { navigate("/") }}></div>

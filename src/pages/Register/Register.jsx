@@ -104,7 +104,7 @@ export const Register = () => {
                 name="password"
                 placeholder="escribe tu contraseña"
                 changeFunction={(e) => inputHandler(e)}
-            validateFunction={(e) => inputValidate(e)}
+                validateFunction={(e) => inputValidate(e)}
             />
             <div>{credencialesError.passwordError}</div>
 

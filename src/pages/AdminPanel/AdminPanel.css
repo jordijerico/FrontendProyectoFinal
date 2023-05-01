@@ -1,0 +1,39 @@
+.AdminPanelDesign {
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2em;
+
+}
+
+.titleClients {
+    font-size: larger;
+    font-weight: 600;
+    margin: 1em;
+
+}
+
+.gridClients {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+@media (min-width:900px) {
+
+    .gridClients {
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+
+    .AdminPanelDesign {
+        height: 75vh;
+    
+    }
+    
+}

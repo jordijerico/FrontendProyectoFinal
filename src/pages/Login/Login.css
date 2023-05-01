@@ -33,13 +33,6 @@ svg {
 
 @media (min-width:1500px) {
 
-    svg {
-        width: 8em;
-        height: 8em;
-        color: rgb(138, 184, 199);
-    }
-
-
     .loginDesign {
         display: flex;
         justify-content: flex-start;

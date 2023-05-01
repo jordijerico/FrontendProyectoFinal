@@ -1,0 +1,38 @@
+.profileDesign {
+    height: 90vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5em;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2em;
+}
+
+.profileData {
+    border: 0.2em solid lightblue;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: larger;
+    line-height: 1.5em;
+
+}
+
+.titleProfile {
+    font-weight: 700;
+    font-size: larger;
+}
+
+
+
+
+
+@media (min-width:900px) {
+
+    .profileData {
+        width: 50vw !important;
+        line-height: 3em !important;
+
+    }
+}

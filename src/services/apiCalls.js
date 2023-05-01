@@ -10,3 +10,13 @@ export const registerMe = async (body) => {
 
     return await axios.post(`${root}/auth/register`, body)
 }
+
+export const getAllUsersByAdmin = async (token) => {
+
+    var config = {
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                }
+            };
+    return await axios.get(`${root}/user/allusers`,config)
+}
