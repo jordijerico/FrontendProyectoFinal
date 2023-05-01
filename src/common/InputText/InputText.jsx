@@ -5,7 +5,8 @@ import './InputText.css';
 export const InputText = ({
     type,
     placeholder,
-    name,
+    name, 
+    value,
     changeFunction,
     validateFunction
 }) => {
@@ -15,6 +16,7 @@ export const InputText = ({
                 className='inputDesign'
                 type={type}
                 name={name}
+                value={value}
                 placeholder={placeholder}
                 onChange={changeFunction}
                 onBlur={validateFunction}

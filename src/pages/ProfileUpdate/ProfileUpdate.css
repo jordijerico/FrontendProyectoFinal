@@ -26,6 +26,7 @@
 
 .btnEditProfile{
     border: 2px solid lightblue;
+    cursor: pointer;
 }
 
 

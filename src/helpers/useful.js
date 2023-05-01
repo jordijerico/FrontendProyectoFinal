@@ -4,6 +4,7 @@ export const validate = (name, data) => {
     switch (name) {
         case 'name':
         case 'nombre':
+        case 'payment':
 
             if (data === "") {
                 return { message: "Rellena el campo porfavor" };

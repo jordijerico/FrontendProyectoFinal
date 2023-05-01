@@ -4,9 +4,11 @@ import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
 import   dayjs  from 'dayjs'
 import './Profile.css'
+import { useNavigate } from 'react-router-dom'
+
 export const Profile = () => {
 
-
+    const navigate = useNavigate();
     const perfil = useSelector(userData);
     return (
         <Container fluid className="profileDesign">
@@ -21,8 +23,10 @@ export const Profile = () => {
                         <div>DNI: {perfil.credentials.usuario.dni}</div><hr />
                         <div>Dirección: {perfil.credentials.usuario.address}</div><hr />
                         <div>Fecha Nacimiento: {dayjs(perfil.credentials.usuario.birthdate).format("DD/MM/YYYY")}</div><hr />
-                        <div>Contraseña: {perfil.credentials.usuario.password}</div><hr />
+                        {/* <div>Contraseña: {perfil.credentials.usuario.password}</div><hr /> */}
+                        
                     </div>
+                    <div className='btnEditProfile' onClick={() => { navigate("/profileupdate") }} >Editar perfil</div>
                 </>
             ) :
                 (<div>Loading profile...</div>)}

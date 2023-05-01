@@ -5,6 +5,7 @@ import { Register } from "../Register/Register";
 import { Login } from "../Login/Login";
 import { AdminPanel } from "../AdminPanel/AdminPanel";
 import { Profile } from "../Profile/Profile";
+import { ProfileUpdate } from "../ProfileUpdate/ProfileUpdate";
 
 export const Body = () => {
     return (
@@ -15,6 +16,7 @@ export const Body = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/admin" element={<AdminPanel />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/profileupdate" element={<ProfileUpdate />} />
             </Routes>
         </>
     );
