@@ -1,6 +1,5 @@
 
 import { useSelector } from 'react-redux'
-import { userData } from '../userSlice'
 import   dayjs  from 'dayjs'
 import './ProfileUpdate.css'
 import React, { useEffect, useState } from 'react'
@@ -10,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { useDispatch } from "react-redux";
 import { validate } from '../../helpers/useful';
-
+import { userData, userout } from '../../pages/userSlice'
 export const ProfileUpdate = () => {
 
     const dispatch = useDispatch();
@@ -69,14 +68,20 @@ export const ProfileUpdate = () => {
         }));
     };
 
+    const logoutFunction = () => {
 
+        dispatch(userout({ credentials: {} }));
+        setTimeout(() => {
+            navigate("/")
+        }, 200);
+    }
 
 
     const updateFunction = async () => {
         updateProfile(credenciales, datosCredencialesRedux.credentials?.token)
             .then(
                 newProfile => {
-                    console.log(newProfile);
+                    logoutFunction();
                     setTimeout(() => {
                         navigate("/")
                     }, 1000);

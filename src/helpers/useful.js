@@ -25,6 +25,28 @@ export const validate = (name, data) => {
 
             return { message: "" };
 
+        case 'address':
+        case 'direccion':
+
+            if (data === "") {
+                return { message: "Rellena el campo porfavor" };
+            } else if (!/[A-Za-z0-9'\.\-\s\,]/gi.test(data)) {
+                return { message: "Formato inválido" };
+            }
+
+            return { message: "" };
+
+        case 'birthdate':
+        case 'fechanacimiento':
+
+            if (data === "") {
+                return { message: "Rellena el campo porfavor" };
+            } else if (!/[(?:19|20)\d\d]/gi.test(data)) {
+                return { message: "Formato inválido" };
+            }
+
+            return { message: "" };
+
 
         case 'phone':
         case 'telefono':
