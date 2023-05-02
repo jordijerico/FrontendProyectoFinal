@@ -37,17 +37,17 @@ export const getAllStoreProducts = async () =>  {
 
 }
 
-export const deleteUserByAdmin = async (token) => {
+export const deleteUserByAdmin = async (id,token) => {
     var config = {
         headers: {
             'Authorization': 'Bearer ' + token,
         }
     };
-    return await axios.get(`${root}/user/profile/delete/`)
+    return await axios.delete(`${root}/user/profile/delete/${id}`,config)
 
 }
 
-export const ProductDetail = async (token) => {
+export const productDetail = async (token) => {
     var config = {
         headers: {
             'Authorization': 'Bearer ' + token,

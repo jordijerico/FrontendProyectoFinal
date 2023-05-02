@@ -26,7 +26,11 @@ export const Home = () => {
 
     return (
         <Container fluid className='homeDesign'>
-
+            <div className='banner'>
+                <p className='banner1'> #madewithLOVE</p>
+                <p className='banner2'> Telas OEKO-TEX y algodón orgánico</p>
+                <p className='banner3'> 100% personalizado</p>
+            </div>
             <div className='gridProducts'>
                 {getProducts.map(product => {
                     return (

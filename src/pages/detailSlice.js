@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const productSlice = createSlice({
     name: 'product',
     initialState: {
-        credentials: {}
+        choosenObject: {}
     },
     reducers: {
         addChoosen: (state, action) => {
@@ -19,7 +19,7 @@ export const productSlice = createSlice({
 });
 
 //exporto las ACCIONES.....
-export const { addChoosen} = productSlice.actions;
+export const { addChoosen } = productSlice.actions;
 
 export const productData = (state) => state.product;
 

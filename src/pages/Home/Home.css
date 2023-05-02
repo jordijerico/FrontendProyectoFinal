@@ -1,6 +1,5 @@
 .homeDesign {
     width: 100vw;
-    
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -15,15 +14,41 @@
     margin-bottom: 2em;
 }
 
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+
+}
+.banner1{
+    color: rgba(82, 141, 128, 0.432);
+    margin: 0;
+    font-size: large;
+    
+}
+.banner2{
+    color: rgba(108, 139, 133, 0.432);
+    margin: 0;
+    font-size: smaller;
+}
+
+.banner3{
+    color: rgba(108, 139, 133, 0.432);
+    font-size: smaller;
+    
+}
+
+
+
 @media (min-width:756px) {
 
     .gridProducts {
         grid-template-columns: 1fr 1fr;
         gap: 4em;
-
     }
 
-    
 }
 
 
@@ -32,12 +57,24 @@
     .gridProducts {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 5em;
-
-    }
-    .homeDesign{
-        height: 75vh;
     }
 
+
+    .banner1{
+        color: rgba(82, 141, 128, 0.432);
+        margin: 0;
+        font-size: xx-large;
+    }
+    .banner2{
+        color: rgba(108, 139, 133, 0.432);
+        margin: 0;
+        font-size: x-large;
+    }
     
-}
+    .banner3{
+        color: rgba(108, 139, 133, 0.432);
+        font-size: x-large;
+        
+    }
 
+}

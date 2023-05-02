@@ -1,12 +1,22 @@
 import Card from 'react-bootstrap/Card';
 import './UserCard.css'
+import { deleteUserByAdmin } from '../../services/apiCalls'
+import { useSelector } from 'react-redux';
+import { userData } from '../../pages/userSlice';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 export function UserCard({ user }) {
-
-
-    const deleteUserFunction = () => {
-
-
+    const datosCredencialesRedux = useSelector(userData);
+    const deleteUserFunction = async () => {
+        try {
+            await deleteUserByAdmin(user.id, datosCredencialesRedux.credentials?.token);
+            window.location.reload(true);
+        } catch (error) {
+            console.log(error)
+        }
     }
+
+
     return (
         <Card style={{ width: '18rem', border: '0.2em solid rgb(167, 204, 197)' }}>
             <Card.Body>
