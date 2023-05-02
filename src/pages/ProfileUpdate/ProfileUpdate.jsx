@@ -170,7 +170,6 @@ export const ProfileUpdate = () => {
             />
             <div>{credencialesError.passwordError}</div>
 
-            
             <div
                 className="buttonLoginDesign"
                 onClick={
