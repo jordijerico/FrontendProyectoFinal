@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { getAllStoreProducts } from '../../services/apiCalls';
 import ProductCard from '../../common/ProductCard/ProductCard'
+import CarouselBanner from '../../common/Carousel/Carousel';
 import './Home.css';
 export const Home = () => {
 
@@ -26,10 +27,7 @@ export const Home = () => {
 
     return (
         <Container fluid className='homeDesign'>
-            <div className='banner'>
 
-
-            </div>
             <div className='gridProducts'>
                 {getProducts.map(product => {
                     return (

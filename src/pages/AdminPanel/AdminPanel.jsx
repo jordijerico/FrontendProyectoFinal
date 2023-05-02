@@ -17,7 +17,6 @@ export const AdminPanel = () => {
             const getAllUsers = async () => {
                 try {
                     const users = await getAllUsersByAdmin(datosCredencialesRedux.credentials?.token);
-                    // console.log(users.data.data);
                     setUsers(users.data.data)
                 } catch (error) {
                     console.log(error)
@@ -31,18 +30,16 @@ export const AdminPanel = () => {
 
     }, [getUsers]);
 
-
-
     return (
         <Container fluid className="AdminPanelDesign">
-            <div className="titleClients">USUARIOS</div>
             <div className="gridClients">
-            {getUsers.map(user => {
-                return (
+
+                {getUsers.map(user => {
+                    return (
                         <UserCard key={user.id} user={user} />
 
-                )
-            })}
+                    )
+                })}
             </div>
 
         </Container>

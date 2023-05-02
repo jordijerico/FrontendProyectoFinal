@@ -25,7 +25,7 @@ ul {
 }
 
 .footer {
-    background-color: #24262b;
+    background-color: rgba(222,238,235,255);
     padding-top: 50px;
 
 }
@@ -37,7 +37,7 @@ ul {
 
 .footer-col h4 {
     font-size: 18px;
-    color: #ffffff;
+    color: black;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
@@ -49,7 +49,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: white;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -65,13 +65,13 @@ ul {
     color: #ffffff;
     text-decoration: none;
     font-weight: 300;
-    color: #bbbbbb;
+    color: #494848;
     display: block;
     transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: #616161;
     padding-left: 8px;
 }
 
@@ -110,9 +110,9 @@ ul {
 @media(min-width: 1024px) {
 
     .footer {
-        position: absolute;
-        width: 100vw;
-        bottom: 0px;
+
+        width: 100%;
+
 
     }
 }

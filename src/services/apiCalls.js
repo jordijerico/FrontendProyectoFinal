@@ -36,3 +36,13 @@ export const getAllStoreProducts = async () =>  {
     return await axios.get(`${root}/product/allproducts`)
 
 }
+
+export const deleteUserByAdmin = async (token) => {
+    var config = {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
+    };
+    return await axios.get(`${root}/user/profile/delete/`)
+
+}

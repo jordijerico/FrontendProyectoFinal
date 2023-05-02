@@ -24,7 +24,7 @@ export const Header = () => {
             {datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 1 ? (
                 <>
                     <div className='linksNav'>
-                        <Navigator ruta={datosCredencialesRedux?.credentials?.usuario?.name} destino={"/profile"} />
+                        <Navigator ruta={'Mi Perfil'} destino={"/profile"} />
                         <Navigator  ruta={"Admin"} destino={"/admin"} />
                         <div className='logoutDesign' onClick={() => logoutFunction()}>Logout</div>
                     </div>
@@ -32,7 +32,7 @@ export const Header = () => {
             ) : (datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 2 ? (
                 <>
                     <div className='linksNav'>
-                        <Navigator ruta={datosCredencialesRedux?.credentials?.usuario?.name} destino={"/profile"} />
+                        <Navigator ruta={'Mi Perfil'} destino={"/profile"} />
                         <div className='logoutDesign' onClick={() => logoutFunction()}>Logout</div>
                     </div>
                 </>
@@ -43,6 +43,7 @@ export const Header = () => {
                         <Navigator ruta={"Register"} destino={"/register"} />
                     </div>
                 </>
+
             )
 
             )

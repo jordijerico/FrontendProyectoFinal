@@ -1,5 +1,6 @@
 .homeDesign {
     width: 100vw;
+    
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -25,12 +26,16 @@
     
 }
 
+
 @media (min-width:1024px) {
 
     .gridProducts {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 5em;
 
+    }
+    .homeDesign{
+        height: 75vh;
     }
 
     

@@ -1,5 +1,5 @@
 .headerDesign {
-    height: 10vh;
+    height: 13vh;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 
 .linksNav {
     display: flex;
-
+    
 }
 
 .logoutDesign {
@@ -22,14 +22,13 @@
     align-items: center;
     margin-right: 0.3em;
     transition: 0.3s;
-    color: rgb(60, 148, 182);
+    color: rgb(167, 204, 197);
     font-weight: 500;
 
 }
 
 .logoutDesign:hover {
-    background-color: rgb(187, 211, 230);
-
+    color: rgb(106, 136, 130);
     transition: 0.3s;
 }
 
@@ -45,14 +44,14 @@
 @media (min-width:900px) {
     .logoDesign {
         width: 15em;
-        height: 7em;
+        height: 10em;
         cursor: pointer;
     }
 
     .logoutDesign {
         height: 4em;
         width: 10em;
-        font-weight: 700;
-        font-size: larger;
+        font-weight: 500;
+        font-size: 22px;
     }
 }
