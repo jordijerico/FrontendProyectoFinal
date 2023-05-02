@@ -3,21 +3,18 @@ import './Footer.css'
 
 export const Footer = () => {
     return (
-        <div className='footerDesign'>
             <footer className="footer">
                 <div className="container">
                     <div className="row">
                         <div className="footer-col">
-                            <h4>company</h4>
+                            <h4>Sobre Nosotros</h4>
                             <ul>
                                 <li><a href="#">about us</a></li>
                                 <li><a href="#">our services</a></li>
-                                <li><a href="#">privacy policy</a></li>
-                                <li><a href="#">affiliate program</a></li>
                             </ul>
                         </div>
                         <div className="footer-col">
-                            <h4>get help</h4>
+                            <h4>Ayuda</h4>
                             <ul>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">shipping</a></li>
@@ -28,9 +25,8 @@ export const Footer = () => {
                         </div>
 
                         <div className="footer-col">
-                            <h4>follow us</h4>
+                            <h4>Síguenos para más</h4>
                             <div className="social-links">
-                                <a href="#"><i className="fab fa-facebook-f"></i></a>
                                 <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-instagram"></i></a>
                                 <a href="#"><i className="fab fa-linkedin-in"></i></a>
@@ -40,8 +36,5 @@ export const Footer = () => {
                 </div>
             </footer>
 
-
-
-        </div>
     )
 }

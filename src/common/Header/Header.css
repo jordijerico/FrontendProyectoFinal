@@ -9,9 +9,10 @@
 
 .linksNav {
     display: flex;
+
 }
 
-.logoutDesign{
+.logoutDesign {
     height: 2em;
     width: 4.5em;
     background-color: transparent;
@@ -33,7 +34,7 @@
 }
 
 .logoDesign {
-    width: 9em;
+    width: 4em;
     height: 3.5em;
     background-image: url("../../assets/ibebelogo.jpg");
     background-repeat: no-repeat;
