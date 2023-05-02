@@ -25,7 +25,7 @@ export const Header = () => {
                 <>
                     <div className='linksNav'>
                         <Navigator ruta={'Mi Perfil'} destino={"/profile"} />
-                        <Navigator  ruta={"Admin"} destino={"/admin"} />
+                        <Navigator ruta={"Admin"} destino={"/admin"} />
                         <div className='logoutDesign' onClick={() => logoutFunction()}>Logout</div>
                     </div>
                 </>

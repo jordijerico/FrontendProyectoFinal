@@ -7,13 +7,11 @@ export function UserCard({ user }) {
 
 
     }
-    console.log(user.role_id);
     return (
-        <Card style={{ width: '18rem', border: '0.2em solid lightblue' }}>
+        <Card style={{ width: '18rem', border: '0.2em solid rgb(167, 204, 197)' }}>
             <Card.Body>
                 <Card.Title>{user.name}</Card.Title>
                 <Card.Text>
-
                     {user.role_id === 1 ? (
                         <>
                             {user.surname} <br />

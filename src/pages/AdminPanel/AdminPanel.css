@@ -15,7 +15,7 @@
 
 }
 
-.gridClients {
+.gridUsers {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
@@ -24,7 +24,7 @@
 
 @media (min-width:900px) {
 
-    .gridClients {
+    .gridUsers {
 
         grid-template-columns: 1fr 1fr 1fr;
 

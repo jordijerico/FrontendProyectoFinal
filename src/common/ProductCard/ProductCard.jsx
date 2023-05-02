@@ -4,11 +4,11 @@ import Card from 'react-bootstrap/Card';
 function ProductCard({ product }) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={product.image} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>
-          {product.price + "€"} 
+          {product.price + "€"}
         </Card.Text>
         <Button variant="primary">Más detalles</Button>
       </Card.Body>

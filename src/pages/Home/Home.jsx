@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { getAllStoreProducts } from '../../services/apiCalls';
 import ProductCard from '../../common/ProductCard/ProductCard'
-import CarouselBanner from '../../common/Carousel/Carousel';
 import './Home.css';
 export const Home = () => {
 

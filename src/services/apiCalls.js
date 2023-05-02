@@ -46,3 +46,14 @@ export const deleteUserByAdmin = async (token) => {
     return await axios.get(`${root}/user/profile/delete/`)
 
 }
+
+export const ProductDetail = async (token) => {
+    var config = {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
+    };
+    return await axios.get(`${root}/product/product/`)
+
+}
+

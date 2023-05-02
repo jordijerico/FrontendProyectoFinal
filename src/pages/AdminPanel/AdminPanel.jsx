@@ -22,7 +22,6 @@ export const AdminPanel = () => {
                     console.log(error)
                 }
 
-
             }
             getAllUsers();
 
@@ -32,12 +31,10 @@ export const AdminPanel = () => {
 
     return (
         <Container fluid className="AdminPanelDesign">
-            <div className="gridClients">
-
+            <div className="gridUsers">
                 {getUsers.map(user => {
                     return (
                         <UserCard key={user.id} user={user} />
-
                     )
                 })}
             </div>

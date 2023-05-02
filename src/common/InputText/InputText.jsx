@@ -5,7 +5,7 @@ import './InputText.css';
 export const InputText = ({
     type,
     placeholder,
-    name, 
+    name,
     value,
     changeFunction,
     validateFunction
