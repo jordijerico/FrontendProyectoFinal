@@ -91,7 +91,6 @@ export const ProfileUpdate = () => {
 
 
     }
-
     const perfil = useSelector(userData);
     return (
         <Container fluid className="updateDesign">
@@ -101,7 +100,7 @@ export const ProfileUpdate = () => {
             <InputText
                 type="text"
                 name="name"
-                placeholder="Nombre"
+                placeholder={datosCredencialesRedux.credentials?.usuario.name}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -109,7 +108,7 @@ export const ProfileUpdate = () => {
             <InputText
                 type="text"
                 name="surname"
-                placeholder="Apellidos"
+                placeholder={datosCredencialesRedux.credentials?.usuario.surname}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -117,7 +116,7 @@ export const ProfileUpdate = () => {
             <InputText
                 type="phone"
                 name="phone"
-                placeholder="Telefono"
+                placeholder={datosCredencialesRedux.credentials?.usuario.phone}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -125,7 +124,7 @@ export const ProfileUpdate = () => {
             <InputText
                 type="text"
                 name="address"
-                placeholder="Dirección"
+                placeholder={datosCredencialesRedux.credentials?.usuario.address}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -133,7 +132,7 @@ export const ProfileUpdate = () => {
             <InputText
                 type="text"
                 name="payment"
-                placeholder="Metodo de pago"
+                placeholder={datosCredencialesRedux?.credentials?.usuario?.payment}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -141,15 +140,23 @@ export const ProfileUpdate = () => {
             <InputText
                 type="date"
                 name="birthdate"
-                placeholder="Fecha de nacimiento"
+                placeholder={datosCredencialesRedux.credentials?.usuario.birthdate}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
             <div>{credencialesError.birthdateError}</div>
             <InputText
+                type="text"
+                name="dni"
+                placeholder={datosCredencialesRedux.credentials?.usuario.dni}
+                changeFunction={(e) => inputHandler(e)}
+                validateFunction={(e) => inputValidate(e)}
+            />
+            <div>{credencialesError.dniError}</div>
+            <InputText
                 type="email"
                 name="email"
-                placeholder="Email nuevo"
+                placeholder={datosCredencialesRedux.credentials?.usuario.email}
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -157,7 +164,7 @@ export const ProfileUpdate = () => {
             <InputText
                 type="password"
                 name="password"
-                placeholder="Contraseña nueva"
+                placeholder= "Nueva contraseña"
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />

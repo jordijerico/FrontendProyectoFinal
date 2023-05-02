@@ -11,7 +11,7 @@
     display: flex;
 }
 
-.logoutDesign, .profileButton{
+.logoutDesign{
     height: 2em;
     width: 4.5em;
     background-color: transparent;
@@ -25,28 +25,30 @@
     font-weight: 500;
 
 }
-.logoutDesign:hover{
+
+.logoutDesign:hover {
     background-color: rgb(187, 211, 230);
 
     transition: 0.3s;
 }
-.logoDesign{
+
+.logoDesign {
     width: 9em;
     height: 2.5em;
-
+    background-image: url("../../assets/ibebelogo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
     cursor: pointer;
 }
 
 @media (min-width:900px) {
-
-
-    .logoDesign{
+    .logoDesign {
         width: 15em;
-        height: 5em;
-
+        height: 7em;
         cursor: pointer;
     }
-    .logoutDesign{
+
+    .logoutDesign {
         height: 4em;
         width: 10em;
         font-weight: 700;

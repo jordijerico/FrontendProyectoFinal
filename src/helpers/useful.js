@@ -47,6 +47,17 @@ export const validate = (name, data) => {
 
             return { message: "" };
 
+        case 'dni':
+        case 'identificacion':
+
+            if (data === "") {
+                return { message: "Rellena el campo porfavor" };
+            } else if (!/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i.test(data)) {
+                return { message: "Formato inválido" };
+            }
+
+            return { message: "" };
+
 
         case 'phone':
         case 'telefono':

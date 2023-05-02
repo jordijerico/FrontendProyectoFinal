@@ -26,10 +26,14 @@ export const Home = () => {
 
     return (
         <Container fluid className='homeDesign'>
+            <div className='banner'>
+
+
+            </div>
             <div className='gridProducts'>
                 {getProducts.map(product => {
                     return (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard  key={product.id} product={product} />
                     )
                 })}
             </div>

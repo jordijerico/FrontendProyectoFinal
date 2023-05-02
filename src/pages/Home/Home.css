@@ -1,0 +1,27 @@
+.homeDesign {
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2em;
+}
+
+.gridProducts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+
+@media (min-width:900px) {
+
+    .gridProducts {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5em;
+
+    }
+
+    
+}
