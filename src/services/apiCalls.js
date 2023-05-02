@@ -31,3 +31,8 @@ export const updateProfile = async (body,token) => {
     return await axios.put(`${root}/user/profile/update`, body,config)
 }
 
+export const getAllStoreProducts = async () =>  {
+
+    return await axios.get(`${root}/product/allproducts`)
+
+}
