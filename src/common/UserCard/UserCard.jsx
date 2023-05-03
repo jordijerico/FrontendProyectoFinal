@@ -18,20 +18,20 @@ export function UserCard({ user }) {
 
 
     return (
-        <Card className='cardUser' style={{ width: '18rem' }}>
+        <Card className='cardUser' style={{ width: '18rem', border: '0.3px solid rgb(106, 136, 130)' }}>
             <Card.Body>
                 <Card.Title>{user.name} {user.surname} </Card.Title>
                 <Card.Text>
                     {user.role_id === 1 ? (
                         <>
                             {user.dni}  <br></br>
-                            {user.email} 
+                            {user.email}
                         </>
                     ) : (
                         <>
-                            {user.dni}
-                            {user.email} 
-                            <span className='btnDeleteUser' onClick={() => deleteUserFunction()}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-trash" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            {user.dni} <br />
+                            {user.email}
+                            <span className='btnDeleteUser' onClick={() => deleteUserFunction()}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#009988" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <line x1="4" y1="7" x2="20" y2="7" />
                                 <line x1="10" y1="11" x2="10" y2="17" />

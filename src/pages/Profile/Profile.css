@@ -28,8 +28,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     font-size: 0.9em;
+    margin-top: 3em;
 
 }
 
@@ -46,7 +47,7 @@
 
 .pData {
     font-size: 1.3em;
-    padding-left: 5em;
+    padding-left: 4em;
     font-style: normal;
     padding-top: 0.3em;
 
@@ -58,11 +59,51 @@
     justify-content: center;
 }
 
-@media (min-width:900px) {
+
+@media (min-width:768px) {
+
 
     .profileData {
-        width: 50vw !important;
-        line-height: 3em !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0em;
+        margin-top: 3em;
 
+    }
+    .pData {
+        padding-left: 3em;
+    }
+
+    .btnEditProfile {
+        margin-bottom: 3.5em;
+    
+    }
+}
+
+@media (min-width:1000px) {
+
+    .profileData {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0em;
+        margin-top: 3em;
+
+    }
+    .pData {
+        padding-left: 2.5em;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .profileData {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 5em;
+
+    }
+
+    .pData {
+        padding-left: 1.5em;
     }
 }

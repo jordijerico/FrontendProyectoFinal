@@ -49,8 +49,19 @@ export const Header = () => {
             ) : (datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 2 ? (
                 <>
                     <div className='linksNav'>
-                        <Navigator ruta={'Mi Perfil'} destino={"/profile"} />
-                        <div className='logoutDesign' onClick={() => logoutFunction()}>Cerrar Sesión</div>
+                    <div className='divBtnProfile'>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="svgLinkNav2 icon icon-tabler icon-tabler-user" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="7" r="4" />
+                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                            </svg>
+                            <Navigator ruta={'Perfil'} destino={"/profile"} />
+                        </div>
+                        <div className='logoutDesign' onClick={() => logoutFunction()}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-logout" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                        </svg> Cerrar Sesión</div>
                     </div>
                 </>
             ) : (

@@ -19,7 +19,7 @@
     border: 0.15em solid rgb(187, 223, 215) !important;
    }
 
-@media (min-width:1500px) {
+@media (min-width:1024px) {
 
     .inputDesign {
         margin: 1.2em;

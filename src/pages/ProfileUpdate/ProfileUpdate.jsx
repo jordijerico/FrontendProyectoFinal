@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { validate } from '../../helpers/useful';
 import { login } from "../userSlice"
 import { decodeToken } from 'react-jwt';
-import { userData} from '../../pages/userSlice'
+import { userData } from '../../pages/userSlice'
 export const ProfileUpdate = () => {
 
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export const ProfileUpdate = () => {
         address: "",
         payment: "",
         birthdate: "",
-        dni:"",
+        dni: "",
         email: "",
         password: "",
     });
@@ -37,7 +37,7 @@ export const ProfileUpdate = () => {
         addressError: "",
         paymentError: "",
         birthdateError: "",
-        dniError:"",
+        dniError: "",
         emailError: "",
         passwordError: "",
     });
@@ -59,33 +59,33 @@ export const ProfileUpdate = () => {
     });
 
     const loginFunction = async () => {
-        
-            try {
-                const loginResult = await loginMe(credenciales)
-                if (loginResult.data.success) {
-                    try {
-                        const decoded = decodeToken(loginResult.data.data)
-                        let datosBackend = {
 
-                            token: loginResult.data.data,
-                            usuario: decoded
+        try {
+            const loginResult = await loginMe(credenciales)
+            if (loginResult.data.success) {
+                try {
+                    const decoded = decodeToken(loginResult.data.data)
+                    let datosBackend = {
 
-                        }
+                        token: loginResult.data.data,
+                        usuario: decoded
 
-                        dispatch(login({ credentials: datosBackend }));
-
-                    } catch (error) {
-                        console.log(error);
                     }
+
+                    dispatch(login({ credentials: datosBackend }));
+
+                } catch (error) {
+                    console.log(error);
                 }
-
-            } catch (error) {
-                console.log(error);
             }
+
+        } catch (error) {
+            console.log(error);
         }
+    }
 
 
-    
+
 
 
     const inputHandler = (e) => {
@@ -124,20 +124,20 @@ export const ProfileUpdate = () => {
 
 
     const updateFunction = async () => {
-        if (credenciales.email !== "" || credenciales.password !== "" || credenciales.name !== ""|| credenciales.surname !== "" || credenciales.address !== "" || credenciales.phone !== ""|| credenciales.dni !== ""|| credenciales.birthdate !== ""|| credenciales.payment !== "") {
-        updateProfile(credenciales, datosCredencialesRedux.credentials?.token)
-            .then(
-                newProfile => {
-                    loginFunction();
-                    setTimeout(() => {
-                        navigate("/profile")
-                    }, 1000);
-                    
-                }
-            )
-            .catch(error => console.log(error));
+        if (credenciales.email !== "" || credenciales.password !== "" || credenciales.name !== "" || credenciales.surname !== "" || credenciales.address !== "" || credenciales.phone !== "" || credenciales.dni !== "" || credenciales.birthdate !== "" || credenciales.payment !== "") {
+            updateProfile(credenciales, datosCredencialesRedux.credentials?.token)
+                .then(
+                    newProfile => {
+                        loginFunction();
+                        setTimeout(() => {
+                            navigate("/profile")
+                        }, 1000);
 
-            }
+                    }
+                )
+                .catch(error => console.log(error));
+
+        }
     }
     const perfil = useSelector(userData);
     return (
@@ -219,19 +219,19 @@ export const ProfileUpdate = () => {
                     <div className='divMessageError'>{credencialesError.passwordError}</div>
 
                     <div className='divCenterButtons'>
-                    <div
-                        className="buttonUpdateProfile"
-                        onClick={
-                            registerAct
-                                ? () => {
-                                    updateFunction();
-                                }
-                                : () => { }
-                        }
-                    >
-                        Guardar
-                    </div>
-                    <div className='btnAtras' onClick={() => { navigate("/profile") }}>Cancelar</div>
+                        <div
+                            className="buttonUpdateProfile"
+                            onClick={
+                                registerAct
+                                    ? () => {
+                                        updateFunction();
+                                    }
+                                    : () => { }
+                            }
+                        >
+                            Guardar
+                        </div>
+                        <div className='btnAtras' onClick={() => { navigate("/profile") }}>Cancelar</div>
                     </div>
                 </>
             ) :

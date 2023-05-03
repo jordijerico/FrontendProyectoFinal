@@ -1,5 +1,5 @@
 .registerDesign {
-    height: 90vh;
+    height: 80vh;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -24,4 +24,15 @@
 .buttonRegisterDesign:hover {
     background-color: aqua;
 
+}
+
+
+@media (min-width:1024px) {
+    .registerDesign {
+        height: 65vh;
+       
+    }
+    
+    
+    
 }

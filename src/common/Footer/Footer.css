@@ -107,10 +107,12 @@ ul {
     }
 }
 
-@media(min-width: 1024px) {
+@media(min-width: 740px) {
 
     .footer {
 
+        position: absolute;
+        bottom: -15em;
         width: 100%;
 
 

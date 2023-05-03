@@ -28,3 +28,10 @@
     background-color: rgb(132, 161, 155);
 }
 
+
+@media (min-width:900px) {
+    .updateDesign{
+      
+    }
+    
+}
