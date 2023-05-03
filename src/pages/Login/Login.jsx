@@ -104,7 +104,7 @@ export const Login = () => {
 
     return (
         <Container fluid className="loginDesign">
-            
+
             <InputText
                 type="email"
                 name="email"
@@ -118,7 +118,7 @@ export const Login = () => {
                 name="password"
                 placeholder="Contraseña"
                 changeFunction={(e) => inputHandler(e)}
-                // validateFunction={(e) => inputValidate(e)}
+            // validateFunction={(e) => inputValidate(e)}
             />
             <div className='divMessageError'>{credencialesError.passwordError}</div>
 
@@ -136,7 +136,7 @@ export const Login = () => {
                 Iniciar Sesión
             </div>
 
-<div className='divCrearCuenta' onClick={() => { navigate("/register") }}>¿No tiene una cuenta? Cree una aquí &gt;</div>
+            <div className='divCrearCuenta' onClick={() => { navigate("/register") }}>¿No tiene una cuenta? Cree una aquí &gt;</div>
 
 
 

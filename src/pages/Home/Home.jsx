@@ -33,7 +33,7 @@ export const Home = () => {
             <div className='gridProducts'>
                 {getProducts.map(product => {
                     return (
-                        <ProductCard  key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} />
                     )
                 })}
             </div>

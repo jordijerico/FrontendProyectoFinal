@@ -16,12 +16,12 @@ export const Profile = () => {
                 <>
 
                     <div className='profileData'>
-                        <div className='dataUser'> Nombre: <p className='pData'>{perfil.credentials.usuario.name} {perfil.credentials.usuario.surname}</p> </div> <hr />
-                        <div className='dataUser'>Teléfono: <p className='pData'>{perfil.credentials.usuario.phone} </p></div><hr />
-                        <div className='dataUser'>Fecha de nacimiento: <p className='pData'>{dayjs(perfil.credentials.usuario.birthdate).format("DD/MM/YYYY")}</p></div><hr />
-                        <div className='dataUser'>Dirección: <p className='pData'>{perfil.credentials.usuario.address}</p></div><hr />
-                        <div className='dataUser'>Email:<p className='pData'>{perfil.credentials.usuario.email}</p></div><hr />
-                        <div className='dataUser'>DNI: <p className='pData'>{perfil.credentials.usuario.dni}</p></div><hr />
+                        <div className='dataUser'> Nombre: <p className='pData'>{perfil.credentials.usuario.name} {perfil.credentials.usuario.surname}</p> </div> 
+                        <div className='dataUser'>Teléfono: <p className='pData'>{perfil.credentials.usuario.phone} </p></div>
+                        <div className='dataUser'>Fecha de nacimiento: <p className='pData'>{dayjs(perfil.credentials.usuario.birthdate).format("DD/MM/YYYY")}</p></div>
+                        <div className='dataUser'>Dirección: <p className='pData'>{perfil.credentials.usuario.address}</p></div>
+                        <div className='dataUser'>Email:<p className='pData'>{perfil.credentials.usuario.email}</p></div>
+                        <div className='dataUser'>DNI: <p className='pData'>{perfil.credentials.usuario.dni}</p></div>
 
                         <div className='divCenterBtn'>
                             <div className='btnEditProfile' onClick={() => { navigate("/profileupdate") }} >Editar perfil</div>

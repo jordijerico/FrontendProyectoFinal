@@ -1,7 +1,6 @@
 .profileDesign {
     width: 100vw;
     background-color: transparent;
-    margin-top: 2em;
 
 }
 
@@ -23,7 +22,6 @@
     height: 2.5em;
     width: 7.5em;
     background-color: rgb(187, 223, 215);
-    ;
     border-radius: 0.6em;
     cursor: pointer;
     transition: 1s;
@@ -43,13 +41,15 @@
 .dataUser {
     font-size: 0.9em;
     font-style: italic;
+    margin-top: 2em;
 }
 
 .pData {
     font-size: 1.3em;
     padding-left: 5em;
     font-style: normal;
-    
+    padding-top: 0.3em;
+
 }
 
 .divCenterBtn {

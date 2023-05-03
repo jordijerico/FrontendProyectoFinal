@@ -88,7 +88,7 @@ export const Register = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div className='divMessageError'>{credencialesError.nameError}</div>   
+            <div className='divMessageError'>{credencialesError.nameError}</div>
 
             <InputText
                 type="email"
