@@ -88,7 +88,7 @@ export const Register = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.nameError}</div>   
+            <div className='divMessageError'>{credencialesError.nameError}</div>   
 
             <InputText
                 type="email"
@@ -97,7 +97,7 @@ export const Register = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.emailError}</div>
+            <div className='divMessageError'> {credencialesError.emailError}</div>
 
             <InputText
                 type="password"
@@ -106,10 +106,7 @@ export const Register = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.passwordError}</div>
-
-
-
+            <div className='divMessageError'>{credencialesError.passwordError}</div>
 
             <div
                 className="buttonRegisterDesign"

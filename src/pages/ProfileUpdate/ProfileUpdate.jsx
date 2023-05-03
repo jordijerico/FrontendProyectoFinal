@@ -104,7 +104,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.nameError}</div>
+            <div className='divMessageError'>{credencialesError.nameError}</div>
             <InputText
                 type="text"
                 name="surname"
@@ -112,7 +112,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.surnameError}</div>
+            <div className='divMessageError'> {credencialesError.surnameError}</div>
             <InputText
                 type="phone"
                 name="phone"
@@ -120,7 +120,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.phoneError}</div>
+            <div className='divMessageError'>{credencialesError.phoneError}</div>
             <InputText
                 type="text"
                 name="address"
@@ -128,7 +128,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.addressError}</div>
+            <div className='divMessageError'>{credencialesError.addressError}</div>
             <InputText
                 type="text"
                 name="payment"
@@ -136,7 +136,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.paymentError}</div>
+            <div className='divMessageError'>{credencialesError.paymentError}</div>
             <InputText
                 type="date"
                 name="birthdate"
@@ -144,7 +144,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.birthdateError}</div>
+            <div className='divMessageError'>{credencialesError.birthdateError}</div>
             <InputText
                 type="text"
                 name="dni"
@@ -152,7 +152,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.dniError}</div>
+            <div className='divMessageError'>{credencialesError.dniError}</div>
             <InputText
                 type="email"
                 name="email"
@@ -160,7 +160,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.emailError}</div>
+            <div className='divMessageError'>{credencialesError.emailError}</div>
             <InputText
                 type="password"
                 name="password"
@@ -168,7 +168,7 @@ export const ProfileUpdate = () => {
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.passwordError}</div>
+            <div className='divMessageError'>{credencialesError.passwordError}</div>
 
             <div
                 className="buttonLoginDesign"

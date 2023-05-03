@@ -14,31 +14,29 @@
     margin-bottom: 2em;
 }
 
-.banner{
+.banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 1em;
-
+    margin-bottom: 1em;
 }
-.banner1{
+
+.banner1 {
     color: rgba(82, 141, 128, 0.432);
     margin: 0;
     font-size: large;
-    
+
 }
-.banner2{
+
+.banner2 {
     color: rgba(108, 139, 133, 0.432);
     margin: 0;
     font-size: smaller;
 }
 
-.banner3{
-    color: rgba(108, 139, 133, 0.432);
-    font-size: smaller;
-    
-}
+
 
 
 
@@ -51,30 +49,41 @@
 
 }
 
-
-@media (min-width:1024px) {
+@media (min-width:1000px) {
 
     .gridProducts {
         grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+@media (min-width:1300px) {
+
+    .gridProducts {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+}
+
+@media (min-width:1600px) {
+
+    .gridProducts {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 5em;
     }
 
 
-    .banner1{
+    .banner1 {
         color: rgba(82, 141, 128, 0.432);
         margin: 0;
-        font-size: xx-large;
+        font-size: 2em;
     }
-    .banner2{
+
+    .banner2 {
         color: rgba(108, 139, 133, 0.432);
         margin: 0;
-        font-size: x-large;
+        font-size: 1.5em;
     }
-    
-    .banner3{
-        color: rgba(108, 139, 133, 0.432);
-        font-size: x-large;
-        
-    }
+
 
 }

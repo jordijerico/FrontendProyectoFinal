@@ -1,0 +1,26 @@
+.card {
+    border: 0 !important;
+}
+
+.btnDetail {
+    background-color: aliceblue;
+}
+
+p{
+    text-align: center;
+}
+
+
+.card-body {
+    height: 4em;
+}
+
+@media (min-width:1600px) {
+
+    p {
+        text-align: end;
+        font-size: 1.2em;
+    }
+
+
+}

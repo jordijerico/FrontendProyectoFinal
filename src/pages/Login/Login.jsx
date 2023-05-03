@@ -107,19 +107,19 @@ export const Login = () => {
             <InputText
                 type="email"
                 name="email"
-                placeholder="escribe un email"
+                placeholder="Email"
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.emailError}</div>
+            <div className='divMessageError'>{credencialesError.emailError}</div>
             <InputText
                 type="password"
                 name="password"
-                placeholder="escribe un password"
+                placeholder="Contraseña"
                 changeFunction={(e) => inputHandler(e)}
-            // validateFunction={(e) => inputValidate(e)}
+                validateFunction={(e) => inputValidate(e)}
             />
-            <div>{credencialesError.passwordError}</div>
+            <div className='divMessageError'>{credencialesError.passwordError}</div>
 
 
             <div
@@ -132,7 +132,7 @@ export const Login = () => {
                         : () => { }
                 }
             >
-                Log in
+                Iniciar Sesión
             </div>
 
 

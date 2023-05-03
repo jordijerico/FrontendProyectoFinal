@@ -1,6 +1,9 @@
 .inputDesign {
     margin: 0.8em;
-    border: 0.1em solid lightblue;
+    border-bottom: 0.2em solid rgb(187, 223, 215);
+    border-left: 0.2em solid rgb(187, 223, 215);
+    border-top: 0;
+    border-right: 0;
     border-radius: 0.5em;
     background-color: transparent;
     width: 15em;
@@ -8,18 +11,15 @@
     color: black;
     text-align: center;
 }
+.inputDesign::placeholder{
+ font-size: smaller;
+}
 
 @media (min-width:1500px) {
 
     .inputDesign {
         margin: 1.2em;
-        border: 0.2em solid lightblue;
-        border-radius: 0.5em;
-        background-color: transparent;
-        width: 30em;
-        height: 3em;
-        color: black;
-        text-align: center;
+
     }
     
 }

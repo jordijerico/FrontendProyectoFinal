@@ -33,14 +33,14 @@ export const Header = () => {
                 <>
                     <div className='linksNav'>
                         <Navigator ruta={'Mi Perfil'} destino={"/profile"} />
-                        <div className='logoutDesign' onClick={() => logoutFunction()}>Logout</div>
+                        <div className='logoutDesign' onClick={() => logoutFunction()}>Cerrar Sesión</div>
                     </div>
                 </>
             ) : (
                 <>
                     <div className='linksNav'>
-                        <Navigator ruta={"Login"} destino={"/login"} />
-                        <Navigator ruta={"Register"} destino={"/register"} />
+                        <Navigator ruta={"Iniciar Sesion"} destino={"/login"} />
+                        <Navigator ruta={"Registrarse"} destino={"/register"} />
                     </div>
                 </>
 
