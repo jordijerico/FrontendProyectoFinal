@@ -3,7 +3,6 @@ import './UserCard.css'
 import { deleteUserByAdmin } from '../../services/apiCalls'
 import { useSelector } from 'react-redux';
 import { userData } from '../../pages/userSlice';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 export function UserCard({ user }) {
     const datosCredencialesRedux = useSelector(userData);

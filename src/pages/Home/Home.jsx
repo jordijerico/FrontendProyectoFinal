@@ -31,9 +31,9 @@ export const Home = () => {
                 <p className='banner2'> Telas OEKO-TEX y Algodón Orgánico</p>
             </div>
             <div className='gridProducts'>
-                {getProducts.map(product => {
+                {getProducts.map(producto => {
                     return (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={producto.id} product={producto} />
                     )
                 })}
             </div>

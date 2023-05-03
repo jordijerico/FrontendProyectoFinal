@@ -1,12 +1,13 @@
-.btnDeleteUser{
+.btnDeleteUser {
     cursor: pointer;
     float: right;
 }
-.btnDeleteUser:hover{
+
+.btnDeleteUser:hover {
     transform: scale(1.5);
 }
 
-.cardUser:hover{
+.cardUser:hover {
     background-color: rgba(177, 201, 198, 0.411);
     transition: 0.3s;
 }

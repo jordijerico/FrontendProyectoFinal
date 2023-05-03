@@ -62,9 +62,6 @@ export const Register = () => {
         }));
     };
 
-
-
-
     const registerFunction = () => {
 
         registerMe(credenciales)
@@ -77,7 +74,6 @@ export const Register = () => {
             )
             .catch(error => console.log(error));
     }
-
 
     return (
         <div className='registerDesign'>

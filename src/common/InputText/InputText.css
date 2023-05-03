@@ -11,13 +11,15 @@
     color: black;
     text-align: center;
 }
-.inputDesign::placeholder{
- font-size: smaller;
+
+.inputDesign::placeholder {
+    font-size: smaller;
 }
-.inputDesign:focus{
+
+.inputDesign:focus {
     outline: none !important;
     border: 0.15em solid rgb(187, 223, 215) !important;
-   }
+}
 
 @media (min-width:1024px) {
 
@@ -25,5 +27,5 @@
         margin: 1.2em;
         width: 40em;
     }
-    
+
 }

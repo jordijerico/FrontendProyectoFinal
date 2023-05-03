@@ -10,7 +10,7 @@
 .buttonRegisterDesign {
     height: 2.5em;
     width: 7.5em;
-    background-color: rgb(187, 223, 215);;
+    background-color: rgb(187, 223, 215);
     border-radius: 0.6em;
     cursor: pointer;
     transition: 1s;
@@ -23,16 +23,14 @@
 
 .buttonRegisterDesign:hover {
     background-color: aqua;
-
 }
 
 
 @media (min-width:1024px) {
     .registerDesign {
         height: 65vh;
-       
     }
-    
-    
-    
+
+
+
 }
