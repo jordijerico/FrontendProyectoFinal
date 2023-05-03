@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   
 }
 
 .buttonLoginDesign {
@@ -27,15 +26,26 @@
     background-color: rgb(132, 161, 155);;
 }
 
+.divCrearCuenta{
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: small;
+}
+.divCrearCuenta:hover{
+color: rgb(127, 131, 134);
+}
 
 
-
-@media (min-width:1500px) {
+@media (min-width:1100px) {
 
     .loginDesign {
         display: flex;
         justify-content: flex-start;
-        margin-top: 5em;
+        margin-top: 7em;
+    }
+    .divCrearCuenta{
+       
+        font-size: medium;
     }
     
 }

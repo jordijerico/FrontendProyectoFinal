@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 2em;
     margin-top: 2em;
+
 }
 
 .titleClients {
@@ -26,7 +26,7 @@
 
     .gridUsers {
 
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
     }
 

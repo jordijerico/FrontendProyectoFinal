@@ -1,5 +1,4 @@
 .navigatorDesign {
-    height: 2em;
     background-color: transparent;
     border-radius: 0.3em;
     color: rgb(167, 204, 197);
@@ -22,9 +21,9 @@
 
 @media (min-width:900px) {
     .navigatorDesign {
-        height: 4em;
+
         width: 8em;
         font-weight: 500;
-        font-size: 22px;
+        font-size: 19px;
     }
 }
