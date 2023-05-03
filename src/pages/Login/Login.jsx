@@ -117,7 +117,7 @@ export const Login = () => {
                 name="password"
                 placeholder="Contraseña"
                 changeFunction={(e) => inputHandler(e)}
-                validateFunction={(e) => inputValidate(e)}
+                // validateFunction={(e) => inputValidate(e)}
             />
             <div className='divMessageError'>{credencialesError.passwordError}</div>
 

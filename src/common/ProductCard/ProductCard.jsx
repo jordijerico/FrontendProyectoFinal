@@ -6,12 +6,12 @@ function ProductCard({ product }) {
 
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card className='cardProduct' style={{ width: '18rem' }}>
       <Card.Img variant="top" src={product.image} />
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
+        <Card.Title className='titleCard'>{product.name}</Card.Title>
       </Card.Body>
-      <Card.Text>
+      <Card.Text className='textcardProduct'>
         {product.price + "€"}
       </Card.Text>
     </Card>

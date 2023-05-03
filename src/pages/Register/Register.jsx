@@ -84,7 +84,7 @@ export const Register = () => {
             <InputText
                 type="text"
                 name="name"
-                placeholder="escribe un nombre"
+                placeholder="Nombre"
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -93,7 +93,7 @@ export const Register = () => {
             <InputText
                 type="email"
                 name="email"
-                placeholder="escribe un email"
+                placeholder="Email"
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />
@@ -102,7 +102,7 @@ export const Register = () => {
             <InputText
                 type="password"
                 name="password"
-                placeholder="escribe tu contraseña"
+                placeholder="Contraseña"
                 changeFunction={(e) => inputHandler(e)}
                 validateFunction={(e) => inputValidate(e)}
             />

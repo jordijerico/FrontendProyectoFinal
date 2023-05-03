@@ -1,26 +1,33 @@
-.card {
+.cardProduct {
     border: 0 !important;
+}
+
+.titleCard{
+    font-size: medium !important;
 }
 
 .btnDetail {
     background-color: aliceblue;
 }
 
-p{
+.textcardProduct{
     text-align: center;
 }
 
 
-.card-body {
+.cardBodyProduct {
     height: 4em;
 }
 
-@media (min-width:1600px) {
+@media (min-width:900px) {
 
-    p {
+    .textcardProduct {
         text-align: end;
         font-size: 1.2em;
     }
 
+    .titleCard{
+        font-size: large !important;
+    }
 
 }

@@ -1,7 +1,7 @@
 .inputDesign {
     margin: 0.8em;
-    border-bottom: 0.2em solid rgb(187, 223, 215);
-    border-left: 0.2em solid rgb(187, 223, 215);
+    border-bottom: 0.15em solid rgb(187, 223, 215);
+    border-left: 0.15em solid rgb(187, 223, 215);
     border-top: 0;
     border-right: 0;
     border-radius: 0.5em;
@@ -14,12 +14,16 @@
 .inputDesign::placeholder{
  font-size: smaller;
 }
+.inputDesign:focus{
+    outline: none !important;
+    border: 0.15em solid rgb(187, 223, 215) !important;
+   }
 
 @media (min-width:1500px) {
 
     .inputDesign {
         margin: 1.2em;
-
+        width: 40em;
     }
     
 }

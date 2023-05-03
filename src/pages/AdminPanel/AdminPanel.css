@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 2em;
-
+    margin-top: 2em;
 }
 
 .titleClients {
@@ -33,7 +33,7 @@
 
     .AdminPanelDesign {
         height: 75vh;
-    
+        margin-top: 5em;
     }
-    
+
 }
