@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import { userData } from '../userSlice'
-import   dayjs  from 'dayjs'
+import dayjs from 'dayjs'
 import './Profile.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -14,18 +14,20 @@ export const Profile = () => {
         <Container fluid className="profileDesign">
             {perfil?.credentials?.token !== undefined ? (
                 <>
-                <p className='titleProfile'>MI PERFIL</p> 
-                    <div className='profileData'> 
-                        <div>Nombre: {perfil.credentials.usuario.name}</div> <hr />
-                        <div>Apellido: {perfil.credentials.usuario.surname}</div><hr />
-                        <div>Telefono: {perfil.credentials.usuario.phone}</div><hr />
-                        <div>Email: {perfil.credentials.usuario.email}</div><hr />
-                        <div>DNI: {perfil.credentials.usuario.dni}</div><hr />
-                        <div>Dirección: {perfil.credentials.usuario.address}</div><hr />
-                        <div>Fecha Nacimiento: {dayjs(perfil.credentials.usuario.birthdate).format("DD/MM/YYYY")}</div><hr />
-                        <div className='btnEditProfile' onClick={() => { navigate("/profileupdate") }} >Editar perfil</div>
+
+                    <div className='profileData'>
+                        <div className='dataUser'> Nombre: <p className='pData'>{perfil.credentials.usuario.name} {perfil.credentials.usuario.surname}</p> </div> <hr />
+                        <div className='dataUser'>Teléfono: <p className='pData'>{perfil.credentials.usuario.phone} </p></div><hr />
+                        <div className='dataUser'>Fecha de nacimiento: <p className='pData'>{dayjs(perfil.credentials.usuario.birthdate).format("DD/MM/YYYY")}</p></div><hr />
+                        <div className='dataUser'>Dirección: <p className='pData'>{perfil.credentials.usuario.address}</p></div><hr />
+                        <div className='dataUser'>Email:<p className='pData'>{perfil.credentials.usuario.email}</p></div><hr />
+                        <div className='dataUser'>DNI: <p className='pData'>{perfil.credentials.usuario.dni}</p></div><hr />
+
+                        <div className='divCenterBtn'>
+                            <div className='btnEditProfile' onClick={() => { navigate("/profileupdate") }} >Editar perfil</div>
+                        </div>
                     </div>
-                    
+
                 </>
             ) :
                 (<div>Loading profile...</div>)}

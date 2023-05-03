@@ -1,19 +1,14 @@
 .profileDesign {
     width: 100vw;
     background-color: transparent;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 5em;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 2em;
+    margin-top: 2em;
+
 }
 
 .profileData {
-    border: 0.2em solid lightblue;
     border-radius: 1em;
     padding: 1em;
-    font-size: larger;
+    font-size: medium;
     line-height: 1.5em;
 
 }
@@ -24,10 +19,44 @@
 }
 
 
-.btnEditProfile{
-    border: 2px solid lightblue;
+.btnEditProfile {
+    height: 2.5em;
+    width: 7.5em;
+    background-color: rgb(187, 223, 215);
+    ;
+    border-radius: 0.6em;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    font-size: 0.9em;
+
 }
 
+.btnEditProfile:hover {
+    background-color: rgb(132, 161, 155);
+    ;
+}
+
+.dataUser {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.pData {
+    font-size: 1.3em;
+    padding-left: 5em;
+    font-style: normal;
+    
+}
+
+.divCenterBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media (min-width:900px) {
 

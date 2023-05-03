@@ -171,7 +171,7 @@ export const ProfileUpdate = () => {
             <div className='divMessageError'>{credencialesError.passwordError}</div>
 
             <div
-                className="buttonLoginDesign"
+                className="buttonUpdateProfile"
                 onClick={
                     registerAct
                         ? () => {
@@ -180,9 +180,9 @@ export const ProfileUpdate = () => {
                         : () => { }
                 }
             >
-                Guardar Cambios
+                Guardar
             </div>
-
+                <div className='btnAtras' onClick={() => { navigate("/profile") }}>Cancelar</div>
                 </>
             ) :
                 (<div>Loading profile...</div>)}

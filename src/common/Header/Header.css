@@ -1,11 +1,11 @@
 .headerDesign {
-    height: 13vh;
+    height: 12vh;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid rgb(106, 136, 130);
-    ;
+    
 }
 
 .linksNav {
@@ -35,25 +35,28 @@
 
 .logoDesign {
     width: 4em;
-    height: 3.5em;
+    height: 4em;
     background-image: url("../../assets/ibebelogo.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
-    border-bottom: 0.5px solid rgb(106, 136, 130);
+    
 }
 
 .divBtnRegister {
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .divBtnRegister {
     margin-top: 13px;
+    cursor: pointer;
 }
 
 .divBtnLogin {
     margin-top: 13px;
+    cursor: pointer;
 }
 
 .svgLinkNav {
@@ -64,15 +67,19 @@
     margin-top: 7px;
     color: rgb(163, 192, 187);
 }
-
+.divBtnAdmin{
+    margin-left: 1em;
+    cursor: pointer;
+}
 
 
 
 @media (min-width:900px) {
     .logoDesign {
-        width: 10em;
-        height: 10em;
-        cursor: pointer;
+        width: 13em;
+        height: 12em;
+        margin-top: 4em;
+
     }
 
     .logoutDesign {
