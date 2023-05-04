@@ -1,17 +1,28 @@
 import Card from 'react-bootstrap/Card';
 import './ProductCard.css'
 import { productDetail } from '../../services/apiCalls';
+import { useDispatch } from 'react-redux';
+import { addChoosen } from '../../pages/detailSlice';
+import { useNavigate } from 'react-router-dom';
 
 function ProductCard({ product }) {
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const productDetailed = async () => {
     try {
-       const productillo =  await productDetail(product.id);
+      const productChoosen = await productDetail(product.id);
 
+      dispatch(addChoosen({ choosenObject: productChoosen }));
+
+      setTimeout(() => {
+        navigate("/productdetail")
+      }, 1000);
     } catch (error) {
-        console.log(error)
+      console.log(error)
     }
-}
+  }
 
 
 
