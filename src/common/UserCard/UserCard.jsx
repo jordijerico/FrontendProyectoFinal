@@ -1,19 +1,29 @@
 import Card from 'react-bootstrap/Card';
 import './UserCard.css'
 import { deleteUserByAdmin } from '../../services/apiCalls'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { userData } from '../../pages/userSlice';
 import { useEffect } from 'react';
+import { reload } from '../../pages/bringUpdateDataSlice';
 export function UserCard({ user }) {
+
+    const dispatch = useDispatch();
     const datosCredencialesRedux = useSelector(userData);
-    const deleteUserFunction = async () => {
-        try {
-            await deleteUserByAdmin(user.id, datosCredencialesRedux.credentials?.token);
-            window.location.reload(true);
-        } catch (error) {
-            console.log(error)
-        }
+    const deleteUserFunction = () => {
+
+        deleteUserByAdmin(user.id, datosCredencialesRedux.credentials?.token)
+            .then((result) => {
+                let recarga = { recarga: true };
+
+                dispatch(reload({ interruptor: recarga }))
+
+            }).catch((error) => {
+                console.log(error)
+            });
+
     }
+
+
 
 
     return (
@@ -30,7 +40,7 @@ export function UserCard({ user }) {
                         <>
                             {user.dni} <br />
                             {user.email}
-                            <span className='btnDeleteUser' onClick={() => deleteUserFunction()}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#009988" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <span className='btnDeleteUser' onClick={() => deleteUserFunction()}><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-trash" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#009988" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <line x1="4" y1="7" x2="20" y2="7" />
                                 <line x1="10" y1="11" x2="10" y2="17" />

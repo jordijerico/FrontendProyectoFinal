@@ -1,7 +1,7 @@
 .cardProduct2 {
     border: 0 !important;
-    margin-top: 5em;
-    margin-left: 5em;
+    margin-top: 2em;
+
 
 }
 
@@ -35,13 +35,24 @@
         font-size: larger;
         display: flex;
         flex-direction: row !important;
+        margin-top: 5em;
+        margin-left: 5em;
     }
 
     .cardProduct2ibody {
         width: 20em !important;
         display: flex;
         flex-direction: column;
-        gap: 4em;
-        margin-left: 10em;
+        gap: 2em;
+        margin-left: 5em;
+    }
+    .btnAddCart {
+        height: 4.5em;
+        width: 6.5em;
+    
+    }
+    .cardProduct2ititle{
+        width: 10em;
+        font-size: 2em !important;
     }
 }

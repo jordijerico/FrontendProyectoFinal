@@ -43,6 +43,7 @@ export const deleteUserByAdmin = async (id, token) => {
             'Authorization': 'Bearer ' + token,
         }
     };
+
     return await axios.delete(`${root}/user/profile/delete/${id}`, config)
 
 }
@@ -52,3 +53,13 @@ export const productDetail = async (id) => {
 
 }
 
+
+export const createOrder = async (body, token) => {
+    var config = {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
+    };
+    return await axios.post(`${root}/order/createorder/`,config)
+
+}

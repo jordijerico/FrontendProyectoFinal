@@ -13,7 +13,6 @@ function ProductCard({ product }) {
   const productDetailed = async () => {
     try {
       const productChoosen = await productDetail(product.id);
-
       dispatch(addChoosen({ choosenObject: productChoosen }));
 
       setTimeout(() => {
