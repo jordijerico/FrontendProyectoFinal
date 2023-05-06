@@ -1,26 +1,23 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import "./ProductDetailCard.css"
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { createOrder } from '../../services/apiCalls'
-import { addProductCart } from "../../pages/shoppingcartSlice"
+
 import { userData } from '../../pages/userSlice';
 export const ProductDetailCard = ({ product }) => {
 
     const datosCredencialesRedux = useSelector(userData);
-    const dispatch = useDispatch();
+
     const addProductToCart = () => {
 
-        dispatch(addProductCart({ ProductCart: product }));
+        createOrder(datosCredencialesRedux.credentials?.token)
+            .then((result) => {
 
-        try {
-            // console.log("hola");
-            // console.log(datosCredencialesRedux?.credentials?.token);
-            // const hola = await createOrder(datosCredencialesRedux?.credentials?.token);
-            // console.log(hola);
-        } catch (error) {
-            console.log(error)
-        }
+                console.log(result);
+            }).catch((error) => {
+                console.log(error)
+            });
     }
 
 

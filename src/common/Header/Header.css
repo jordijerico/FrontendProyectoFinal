@@ -123,4 +123,17 @@
         margin-right: 1.5em;
     }
 
+    .svgCart{
+        margin-left: 22em;
+    }
+
+
+    
+}
+
+@media (min-width:1300px) {
+   
+    .svgCart{
+        margin-left: 47em;
+    }
 }

@@ -15,13 +15,6 @@ export const AdminPanel = () => {
 
     useEffect(() => {
 
-        console.log(updatedInfo);
-
-    });
-
-
-    useEffect(() => {
-
         if (updatedInfo?.interruptor?.recarga) {
             setUsers([]);
         }

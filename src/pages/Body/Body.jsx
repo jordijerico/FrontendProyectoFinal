@@ -7,6 +7,7 @@ import { AdminPanel } from "../AdminPanel/AdminPanel";
 import { Profile } from "../Profile/Profile";
 import { ProfileUpdate } from "../ProfileUpdate/ProfileUpdate";
 import { ProductDetail } from "../ProductDetail/ProductDetail";
+import { ShoppingCartPanel } from "../ShoppingCartPanel/ShoppingCartPanel";
 
 export const Body = () => {
     return (
@@ -19,6 +20,7 @@ export const Body = () => {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/profileupdate" element={<ProfileUpdate />} />
                 <Route path="/productdetail" element={<ProductDetail />} />
+                <Route path="/shoppingcart" element={<ShoppingCartPanel />} />
             </Routes>
         </>
     );
