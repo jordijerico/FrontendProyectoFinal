@@ -8,6 +8,7 @@ import { Profile } from "../Profile/Profile";
 import { ProfileUpdate } from "../ProfileUpdate/ProfileUpdate";
 import { ProductDetail } from "../ProductDetail/ProductDetail";
 import { ShoppingCartPanel } from "../ShoppingCartPanel/ShoppingCartPanel";
+import { HistoryPanel } from "../HistoryPanel/HistoryPanel";
 
 export const Body = () => {
     return (
@@ -21,6 +22,7 @@ export const Body = () => {
                 <Route path="/profileupdate" element={<ProfileUpdate />} />
                 <Route path="/productdetail" element={<ProductDetail />} />
                 <Route path="/shoppingcart" element={<ShoppingCartPanel />} />
+                <Route path="/history" element={<HistoryPanel />} />
             </Routes>
         </>
     );

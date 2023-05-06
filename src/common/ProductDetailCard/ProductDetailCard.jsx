@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import "./ProductDetailCard.css"
 import { useSelector } from 'react-redux';
 import { createOrder } from '../../services/apiCalls'
-
 import { userData } from '../../pages/userSlice';
+
 export const ProductDetailCard = ({ product }) => {
 
     const datosCredencialesRedux = useSelector(userData);
 
+
     const addProductToCart = () => {
 
-        createOrder(datosCredencialesRedux.credentials?.token)
+
+        console.log(datosCredencialesRedux?.credentials?.token);
+        createOrder(datosCredencialesRedux.credentials.token )
             .then((result) => {
 
                 console.log(result);

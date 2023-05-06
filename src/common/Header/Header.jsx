@@ -18,6 +18,9 @@ export const Header = () => {
         }, 200);
     }
 
+
+
+
     return (
         <div className="headerDesign">
             <div className='divLogo'><div className='logoDesign' onClick={() => { navigate("/") }}></div></div>
@@ -25,13 +28,6 @@ export const Header = () => {
             {datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 1 ? (
                 <>
                     <div className='linksNav'>
-                        <Navigator ruta={<svg xmlns="http://www.w3.org/2000/svg" className=" svgCart icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="2" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <circle cx="6" cy="19" r="2" />
-                            <circle cx="17" cy="19" r="2" />
-                            <path d="M17 17h-11v-14h-2" />
-                            <path d="M6 5l14 1l-1 7h-13" />
-                        </svg>} destino={"/shoppingcart"} />
                         <div className='divBtnProfile'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="svgLinkNav2 icon icon-tabler icon-tabler-user" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -57,6 +53,18 @@ export const Header = () => {
             ) : (datosCredencialesRedux.credentials?.token && datosCredencialesRedux?.credentials?.usuario?.roleId === 2 ? (
                 <>
                     <div className='linksNav'>
+                        <svg onClick={() => { navigate("/history") }} xmlns="http://www.w3.org/2000/svg" className="svgHistory  icon icon-tabler icon-tabler-history" width="44" height="44" viewBox="0 0 24 24" strokeWidth="2" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <polyline points="12 8 12 12 14 14" />
+                            <path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" />
+                        </svg>
+                        <svg onClick={() => { navigate("/shoppingcart") }} xmlns="http://www.w3.org/2000/svg" className=" svgCart icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="2" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <circle cx="6" cy="19" r="2" />
+                            <circle cx="17" cy="19" r="2" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                        </svg>
                         <div className='divBtnProfile'>
                             <svg xmlns="http://www.w3.org/2000/svg" className="svgLinkNav2 icon icon-tabler icon-tabler-user" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -75,6 +83,7 @@ export const Header = () => {
             ) : (
                 <>
                     <div className='linksNav'>
+
                         <div className='divBtnLogin'>
                             <Navigator ruta={<svg xmlns="http://www.w3.org/2000/svg" className="svgLinkNav icon icon-tabler icon-tabler-login" width="32" height="32" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#deeeeb" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
