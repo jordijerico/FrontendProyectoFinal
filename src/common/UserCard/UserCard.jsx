@@ -3,7 +3,6 @@ import './UserCard.css'
 import { deleteUserByAdmin } from '../../services/apiCalls'
 import { useDispatch, useSelector } from 'react-redux';
 import { userData } from '../../pages/userSlice';
-import { useEffect } from 'react';
 import { reload } from '../../pages/bringUpdateDataSlice';
 export function UserCard({ user }) {
 

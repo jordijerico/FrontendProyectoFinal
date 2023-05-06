@@ -65,6 +65,24 @@ export const createOrder = async (token) => {
 }
 
 
+export const getAllOrderProductsByUser = async (id,token) => {
+    var config = {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
+    };
+    return await axios.get(`${root}/orderproduct/allorderproducts/${id}`, config)
+
+}
+
+
+
+
+
+
+
+
+
 // export const createOrder = async (id,token) => {
 //     try {
 //       const config = {
