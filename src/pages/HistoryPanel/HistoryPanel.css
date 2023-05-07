@@ -1,3 +1,10 @@
 .shoppingCartPanelDesign{
     
 }
+
+.gridHistory{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4em;
+    margin-bottom: 2em;
+}

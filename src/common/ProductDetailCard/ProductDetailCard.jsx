@@ -1,26 +1,27 @@
 import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import "./ProductDetailCard.css"
-import { useSelector } from 'react-redux';
-import { createOrder } from '../../services/apiCalls'
-import { userData } from '../../pages/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { addProductCart } from '../../pages/shoppingcartSlice';
+import { productData } from '../../pages/detailSlice';
+import { useNavigate } from 'react-router-dom';
 
 export const ProductDetailCard = ({ product }) => {
 
-    const datosCredencialesRedux = useSelector(userData);
-
-
+    const productSelected = useSelector(productData);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const addProductToCart = () => {
+        try {
+            dispatch(addProductCart({ ProductCart: productSelected }));
 
+            setTimeout(() => {
+                navigate("/shoppingcart")
+            }, 300);
+        } catch (error) {
+            console.log(error);
+        }
 
-        console.log(datosCredencialesRedux?.credentials?.token);
-        createOrder(datosCredencialesRedux.credentials.token )
-            .then((result) => {
-
-                console.log(result);
-            }).catch((error) => {
-                console.log(error)
-            });
     }
 
 

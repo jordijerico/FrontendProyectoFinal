@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 import { getAllOrderProductsByUser } from '../../services/apiCalls';
 import { useSelector } from 'react-redux';
 import { userData } from '../userSlice';
-import UserCard from '../../common/UserCard/UserCard';
+import HistoryCardInfo from '../../common/HistoryCard/HistoryCard';
 
 export const HistoryPanel = () => {
 
@@ -18,7 +18,6 @@ export const HistoryPanel = () => {
       const getAllOrdersProducts = async () => {
         try {
           const ordersproducts = await getAllOrderProductsByUser(datosCredencialesRedux?.credentials?.usuario.userId, datosCredencialesRedux.credentials?.token);
-          console.log(ordersproducts.data.data);
           setOrders(ordersproducts.data.data)
         } catch (error) {
           console.log(error)
@@ -34,12 +33,14 @@ export const HistoryPanel = () => {
 
   return (
     <Container fluid className="HistoryPanelDesign">
-      <div className="gridUsers">
-        {getOrders.map(user => {
+      <div className="gridHistory">
+        {getOrders.map(history => {
           return (
-            <UserCard key={user.id} user={user} />
+            <HistoryCardInfo key={history.id} history={history} />
           )
+
         })}
+
       </div>
 
     </Container>
