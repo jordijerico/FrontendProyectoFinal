@@ -1,10 +1,29 @@
-.shoppingCartPanelDesign{
-    
+.HistoryPanelDesign {
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
 }
 
-.gridHistory{
+
+.gridHistory {
     display: grid;
     grid-template-columns: 1fr;
     gap: 4em;
     margin-bottom: 2em;
+}
+
+@media (min-width:900px) {
+
+    .gridHistory {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .HistoryPanelDesign {
+        height: 75vh;
+        margin-top: 5em;
+    }
+
 }

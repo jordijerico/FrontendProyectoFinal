@@ -1,11 +1,21 @@
-.cardProduct2 {
+.cardProductCart2 {
     border: 0 !important;
     margin-top: 2em;
-
-
 }
 
-.btnAddCart {
+.titleCart {
+    text-align: center;
+    color: rgb(106, 136, 130);
+    margin: 1em;
+}
+
+.divcenterbtnAdd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BtnFinishShop {
     height: 2.5em;
     width: 5.5em;
     background-color: rgb(187, 223, 215);
@@ -17,42 +27,38 @@
     align-items: center;
     margin-top: 1.5em;
     font-size: 0.9em;
-}
-
-.divcenterbtnAdd {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 1em;
 }
 
 
 
 @media (min-width:1100px) {
 
-    .cardProduct2 {
-        width: 30em !important;
-        height: 30em !important;
-        font-size: larger;
+    .cardProduct2Cart {
+        width: 25em !important;
+        height: 25em !important;
         display: flex;
         flex-direction: row !important;
         margin-top: 5em;
         margin-left: 5em;
     }
 
-    .cardProduct2ibody {
+    .cardProduct2Cartbody {
         width: 20em !important;
         display: flex;
         flex-direction: column;
         gap: 2em;
         margin-left: 5em;
     }
-    .btnAddCart {
-        height: 4.5em;
-        width: 6.5em;
-    
-    }
-    .cardProduct2ititle{
+
+    .cardProduct2Carttitle {
         width: 10em;
         font-size: 2em !important;
     }
+
+    .titleCart {
+        font-size: xx-large;
+        margin-top: 1em;
+    }
+
 }
