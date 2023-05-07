@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const root = "http://localhost:4000"
+const root = "https://backendproyectofinal-production.up.railway.app"
 
 export const loginMe = async (body) => {
     return await axios.post(`${root}/auth/login`, body)
