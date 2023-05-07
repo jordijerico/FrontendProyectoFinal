@@ -1,4 +1,4 @@
-# Clinica Dental Front End React
+# ibebe Oficial eCommerce
 
 Este proyecto consiste en una página web eCommerce conectada a una APIRestFul backend con Base de Datos para la gestión y utlización de una tienda online de un negocio de Instagram 'iBebeOficial'.
 
