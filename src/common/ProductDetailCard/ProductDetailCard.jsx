@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import "./ProductDetailCard.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { addProductCart } from '../../pages/shoppingcartSlice';
+import { addProductCart, productCartData } from '../../pages/shoppingcartSlice';
 import { productData } from '../../pages/detailSlice';
 import { useNavigate } from 'react-router-dom';
 
 export const ProductDetailCard = ({ product }) => {
 
-    const productSelected = useSelector(productData);
+    const productRedux = useSelector(productCartData);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const addProductToCart = () => {
         try {
-            dispatch(addProductCart({ ProductCart: productSelected }));
+            dispatch(addProductCart({ ProductCart: product.choosenObject.data.data }));
 
             setTimeout(() => {
                 navigate("/shoppingcart")
@@ -28,18 +28,18 @@ export const ProductDetailCard = ({ product }) => {
 
     return (
         <Card className='cardProduct2' style={{ width: '18rem' }}>
-            <Card.Img className='cardProduct2image' variant="top" src={product.choosenObject.data.data.image} />
+            <Card.Img className='cardProduct2image' variant="top" src={product?.choosenObject?.data?.data?.image} />
             <Card.Body className='cardProduct2ibody'>
 
-                <Card.Title className='cardProduct2ititle'>{product.choosenObject.data.data.name}</Card.Title>
+                <Card.Title className='cardProduct2ititle'>{product?.choosenObject?.data?.data?.name}</Card.Title>
                 <Card.Text>
-                    {"Material: " + product.choosenObject.data.data.material} <br />
+                    {"Material: " + product?.choosenObject?.data?.data?.material} <br />
                 </Card.Text>
                 <Card.Text>
-                    {product.choosenObject.data.data.description}<br />
+                    {product?.choosenObject?.data?.data?.description}<br />
                 </Card.Text>
                 <Card.Text>
-                    {"Precio: " + product.choosenObject.data.data.price + " €"}
+                    {"Precio: " + product?.choosenObject?.data?.data?.price + " €"}
                 </Card.Text>
 
                 <div className='divcenterbtnAdd'>

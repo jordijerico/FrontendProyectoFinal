@@ -13,21 +13,10 @@ export const ProductDetailCardCart = ({ product }) => {
     const dispatch = useDispatch();
     const productDet = useSelector(productData);
 
-    const finishBuy = () => {
-        try {
-            dispatch(addChoosen({ choosenObject: {} }));
-            navigate("/")
-
-        } catch (error) {
-            console.log(error);
-        }
-
-    }
-console.log(productDet.choosenObject.data);
 
     return (
         <Container fluid>
-            <div className='titleCart'>CARRITO</div>
+
 
 
             {productDet.choosenObject.data === undefined ? (
@@ -43,37 +32,29 @@ console.log(productDet.choosenObject.data);
 
 
                     <Card className='cardProduct2Cart' >
-                        <Card.Img className='cardProductCart2image' variant="top" src={product?.ProductCart?.choosenObject?.data?.data?.image} />
+                        <Card.Img className='cardProductCart2image' variant="top" src={product.image} />
                         <Card.Body className='cardProduct2Cartbody'>
 
-                            <Card.Title className='cardProduct2Carttitle'>{product?.ProductCart?.choosenObject?.data?.data?.name}</Card.Title>
+                            <Card.Title className='cardProduct2Carttitle'>{product.name}</Card.Title>
                             <Card.Text>
-                                {"Material: " + product?.ProductCart?.choosenObject?.data?.data?.material} <br />
+                                {"Material: " + product.material} <br />
                             </Card.Text>
                             <Card.Text>
-                                {product?.ProductCart?.choosenObject?.data?.data?.description}<br />
+                                {product.description}<br />
                             </Card.Text>
                             <Card.Text>
-                                {"Precio: " + product?.ProductCart?.choosenObject?.data?.data?.price + " €"}
+                                {"Precio: " + product.price + " €"}
                             </Card.Text>
 
                         </Card.Body>
 
                     </Card>
 
-                    <div className='divcenterbtnAdd'>
-                        <div className='BtnFinishShop' onClick={() => finishBuy()}>
-                            COMPRAR
-
-                        </div>
-                    </div>
 
                 </>
             )
 
             }
-
-
 
         </Container>
     );

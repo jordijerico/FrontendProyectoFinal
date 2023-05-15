@@ -10,8 +10,7 @@ export const shoppingcartSlice = createSlice({
         addProductCart: (state, action) => {
             return {
                 ...state,
-                ...action.payload
-
+                ProductCart: [...state.ProductCart, action.payload]
             }
         }
 

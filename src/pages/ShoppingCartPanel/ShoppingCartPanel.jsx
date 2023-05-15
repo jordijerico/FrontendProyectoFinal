@@ -9,15 +9,41 @@ import { useNavigate } from 'react-router-dom'
 export const ShoppingCartPanel = () => {
 
   const navigate = useNavigate();
-  const productDetail = useSelector(productCartData);
+  const reduxData = useSelector(productCartData);
+  const productMap = reduxData.ProductCart
 
+
+
+
+  const finishBuy = () => {
+    try {
+      dispatch(addChoosen({ choosenObject: [{}] }));
+      navigate("/")
+
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
   return (
     <Container fluid className="shoppingCartPanelDesign">
+      <div>CARRITO</div>
+
+      {productMap.map((productDetail) => {
+        const productoArray = productDetail.ProductCart
+        return (
+
+          <ProductDetailCardCart product={productoArray} key={productoArray.id} />
+        );
+      })}
 
 
-      <ProductDetailCardCart product={productDetail} />
+      <div className='divcenterbtnAdd'>
+        <div className='BtnFinishShop' onClick={() => finishBuy()}>
+          COMPRAR
 
-
+        </div>
+      </div>
 
     </Container>
   )
