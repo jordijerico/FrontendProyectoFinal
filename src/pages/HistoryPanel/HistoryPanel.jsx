@@ -31,12 +31,20 @@ export const HistoryPanel = () => {
   }, [getOrders]);
 
 
+  // {getOrders.map(history => {
+  //   let x = 0;
+  //   console.log(history?.Products[x]?.name);
+  //   x++;
+  // })}
+
+
+
   return (
     <Container fluid className="HistoryPanelDesign">
       <div className="gridHistory">
         {getOrders.map(history => {
           return (
-            <HistoryCardInfo key={history.id} history={history} />
+            <HistoryCardInfo key={history.id} history={history}  />
           )
 
         })}

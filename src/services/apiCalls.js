@@ -76,32 +76,3 @@ export const getAllOrderProductsByUser = async (id,token) => {
 
 }
 
-
-
-
-
-
-
-
-
-// export const createOrder = async (id,token) => {
-//     try {
-//       const config = {
-//         headers: {
-//           'Authorization': 'Bearer ' + token,
-//         }
-//       };
-  
-//       const data = {
-//         // Aquí puedes agregar los datos del pedido
-//         // que deseas enviar al servidor
-//         user_id: id,
-//         status: 'pending'
-//       };
-  
-//       const response = await axios.post(`${root}/order/createorder`, data, config);
-//       return response.data;
-//     } catch (error) {
-//       throw new Error(error.message);
-//     }
-//   }

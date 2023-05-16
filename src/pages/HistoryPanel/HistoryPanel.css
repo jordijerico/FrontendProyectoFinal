@@ -15,14 +15,27 @@
     margin-bottom: 2em;
 }
 
-@media (min-width:900px) {
+@media (min-width:600px) {
 
     .gridHistory {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .HistoryPanelDesign {
-        height: 75vh;
+        margin-top: 5em;
+    }
+
+}
+
+
+
+@media (min-width:1350px) {
+
+    .gridHistory {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .HistoryPanelDesign {
         margin-top: 5em;
     }
 

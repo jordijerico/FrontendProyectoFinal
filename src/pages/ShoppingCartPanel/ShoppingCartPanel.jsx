@@ -25,10 +25,10 @@ export const ShoppingCartPanel = () => {
           products: productsIds
         }
 
-        console.log(productoObject);
         createOrder(productoObject, perfil?.credentials?.token)
           .then(
             productData => {
+              dispatch(cleanProductCart({ ProductCart: {} }));
               setTimeout(() => {
                 navigate("/")
               }, 1000);
