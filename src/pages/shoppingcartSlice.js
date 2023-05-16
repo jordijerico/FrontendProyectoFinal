@@ -12,6 +12,12 @@ export const shoppingcartSlice = createSlice({
                 ...state,
                 ProductCart: [...state.ProductCart, action.payload]
             }
+        },
+        cleanProductCart: (state, action) => {
+            return {
+                ...state,
+                ProductCart: [...state.ProductCart, action.payload]
+            }
         }
 
     }
@@ -19,7 +25,7 @@ export const shoppingcartSlice = createSlice({
 });
 
 //exporto las ACCIONES.....
-export const { addProductCart } = shoppingcartSlice.actions;
+export const { addProductCart,cleanProductCart } = shoppingcartSlice.actions;
 
 export const productCartData = (state) => state.shoppingcart;
 
