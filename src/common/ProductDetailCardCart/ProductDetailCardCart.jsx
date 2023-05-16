@@ -23,14 +23,8 @@ export const ProductDetailCardCart = ({ product }) => {
                 <>
                     <div>Todavía no hay productos en tu carrito</div>
                 </>
-
-
-
             ) : (
                 <>
-
-
-
                     <Card className='cardProduct2Cart' >
                         <Card.Img className='cardProductCart2image' variant="top" src={product.image} />
                         <Card.Body className='cardProduct2Cartbody'>

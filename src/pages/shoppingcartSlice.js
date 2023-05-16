@@ -16,7 +16,7 @@ export const shoppingcartSlice = createSlice({
         cleanProductCart: (state, action) => {
             return {
                 ...state,
-                ProductCart: [...state.ProductCart, action.payload]
+                ProductCart: []
             }
         }
 

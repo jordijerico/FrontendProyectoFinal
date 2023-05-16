@@ -3,12 +3,10 @@ import Card from 'react-bootstrap/Card';
 import "./ProductDetailCard.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { addProductCart, productCartData } from '../../pages/shoppingcartSlice';
-import { productData } from '../../pages/detailSlice';
 import { useNavigate } from 'react-router-dom';
 
 export const ProductDetailCard = ({ product }) => {
 
-    const productRedux = useSelector(productCartData);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const addProductToCart = () => {

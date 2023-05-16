@@ -54,13 +54,14 @@ export const productDetail = async (id) => {
 }
 
 
-export const createOrder = async (token) => {
+export const createOrder = async (body,token) => {
     var config = {
         headers: {
             'Authorization': 'Bearer ' + token,
         }
     };
-    return await axios.post(`${root}/order/createorder`, config)
+
+    return await axios.post(`${root}/order/createorder`,body, config)
 
 }
 

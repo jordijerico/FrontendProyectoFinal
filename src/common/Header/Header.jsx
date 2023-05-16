@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { userData, userout } from '../../pages/userSlice'
 import { Navigator } from '../Navigator/Navigator'
 import './Header.css'
+import { cleanProductCart } from '../../pages/shoppingcartSlice'
 
 export const Header = () => {
     const navigate = useNavigate();
@@ -13,6 +14,7 @@ export const Header = () => {
     const logoutFunction = () => {
 
         dispatch(userout({ credentials: {} }));
+        localStorage.clear();
         setTimeout(() => {
             navigate("/")
         }, 200);
